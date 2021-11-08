@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- CSS only	bootStrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		
+		<!-- My CSS File -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Cards To Do List</title>
+	</head>
+	<body>
+		
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" id="searchTxt"type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<!-- End navigation bar -->
+		
+		<div class="container mt-2">
+			
+			<!-- Main Page Heading -->
+			<h1>Hading</h1>
+			
+				
+				<!-- input text area -->
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Add a Note</h5>
+					<div class="mb-3">
+						<textarea class="form-control" id="addTxt" rows="3"></textarea>
+						<!-- <input type="hidden" id="saveIndex" /> -->
+					</div>
+					<button id="addBtn"class="btn btn-success">Add Node</button>
+				</div>
+			</div>		<!-- end input text area -->
+			
+
+			<!-- Heading Add Note List to pege  -->
+			<hr><h3>Your Notes</h3><hr>
+
+
+			<!-- Start Card	for dunamicaly add text with javascript	 --> 
+			<div id="notes" class="row container-fluid">
+					<button class="p-2 lg:px-4 md:mx-2 text-center border border-solid border-indigo-600 rounded bg-indigo-600 text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1" style="display: none" id="save-todo-btn">Edit Todo</button>
+				
+				<!-- 	<div class="card noteCard my-2 mx-2" style="width: 18rem;">
+							<div class="card-body">
+									<h5 class="card-title">Note</h5>
+									<p class="card-text">Some xt to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="btn btn-primary">Delete Note</a>
+							</div>
+				</div> -->
+			</div>
+						<!-- foote use for Remove button to clear notes list -->
+				<div class="footer">
+					<span>You have <span class="pendingNumb"></span> panding tasks</span>
+					<button type="button" class="btn btn-danger">Remove All</button>
+				</div>
+				<!-- end footer -->
+
+		</div>
+		<!-- End Cards -->
+
+
+		<!-- My JS File -->
+		<script src="script.js"></script>
+
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	</body>
+</html>
